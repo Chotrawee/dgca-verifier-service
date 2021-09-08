@@ -147,5 +147,4 @@ public class SignerInformationController {
 
         return ResponseEntity.ok(signerInformationService.getListOfValidKids());
     }
-
 }

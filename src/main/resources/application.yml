@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 spring:
   application:
     name: dgca-verifier-service
@@ -10,6 +10,14 @@ spring:
     password: ''
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/dgc
+#    username: root
+#    password: P@ssw0rd
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    jndi-name: false
+#    jpa:
+#      database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
       ddl-auto: validate
   liquibase:
@@ -50,18 +58,18 @@ dgc:
   gateway:
     connector:
       enabled: true
-      endpoint: https://dgc-gateway.example.com
+      endpoint: http://thai-dgc.digio.co.th:8090
       proxy:
         enabled: false
       max-cache-age: 300
       tls-trust-store:
-        password: dgcg-p4ssw0rd
+        password:
         path: classpath:tls_trust_store.p12
       tls-key-store:
         alias: 1
-        password: dgcg-p4ssw0rd
+        password:
         path: classpath:tls_key_store.p12
       trust-anchor:
-        alias: ta
+        alias: dgcg_trust_anchor
         password: dgcg-p4ssw0rd
-        path: classpath:trust_anchor.jks
+        path: classpath:ta.jks

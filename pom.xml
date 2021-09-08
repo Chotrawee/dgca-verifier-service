@@ -38,7 +38,7 @@
     <bcpkix.version>1.68</bcpkix.version>
     <okhttp.version>4.9.1</okhttp.version>
     <shedlock.version>4.23.0</shedlock.version>
-    <dgc.lib.version>1.1.3</dgc.lib.version>
+    <dgc.lib.version>latest</dgc.lib.version>
     <!-- plugins -->
     <plugin.checkstyle.version>3.1.2</plugin.checkstyle.version>
     <plugin.sonar.version>3.6.1.1688</plugin.sonar.version>
@@ -129,6 +129,13 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
+<!--      <dependency>-->
+<!--        <groupId>-->
+<!--          org.springframework.security.extensions-->
+<!--        </groupId>-->
+<!--        <artifactId>spring-security-saml2-core</artifactId>-->
+<!--        <version>1.0.8.RELEASE</version>-->
+<!--      </dependency>-->
     </dependencies>
   </dependencyManagement>
 
